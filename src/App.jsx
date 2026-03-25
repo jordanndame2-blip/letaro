@@ -1,25 +1,30 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
 import './App.css'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
-import Resevation from './pages/Resevation'
+import Reservation from './pages/Resevation'
 import Menu from './pages/Menu'
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
+import Cart from './pages/Cart'
+import DetailPlat from './pages/DetailPlat';
+import Admin from './pages/Admin';
+
 
 function App() {
-
   return (
-    <>
     <Routes>
-      {/* HomePage */}
-      <Route path='/' element={<Home/>}/>
-      <Route path='/contact' element={<Contact/>}/>
-      <Route path='/about' element={<About/>}/>
-      <Route path='/reservation' element={<Resevation/>}/>
-      <Route path='/menu' element={<Menu/>}/>
+      <Route path="/" element={<Home />} />
+      <Route path="/menu" element={<Menu />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/reservation" element={<Reservation />} />
+      <Route path="/details/:id" element={<DetailPlat />} />
+      <Route path="/admin" element={<Admin />} />
     </Routes>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;

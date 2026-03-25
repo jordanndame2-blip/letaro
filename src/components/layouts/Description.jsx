@@ -1,32 +1,5 @@
 import { ChefHat, Utensils, ShoppingBag, Clock } from 'lucide-react';
-
-const features = [
-  {
-    id: 1,
-    title: 'Maître Chef',
-    description: 'Notre chef étoilé prépare des plats exceptionnels avec des ingrédients frais et des recettes authentiques.',
-    icon: ChefHat,
-  },
-  {
-    id: 2,
-    title: 'Nourriture de Qualité',
-    description: 'Des produits frais, locaux et de saison sélectionnés avec soin pour garantir une qualité exceptionnelle.',
-    icon: Utensils,
-  },
-  {
-    id: 3,
-    title: 'Commande en Ligne',
-    description: 'Commandez facilement depuis notre site et recevez vos plats préférés directement chez vous.',
-    icon: ShoppingBag,
-  },
-  {
-    id: 4,
-    title: 'Service 24/7',
-    description: 'À votre service jour et nuit pour satisfaire toutes vos envies, à toute heure.',
-    icon: Clock,
-  }
-];
-
+import { features } from '../../data/menu';
 // Composant Card avec thème orange
 const Card = ({ title, description, icon: Icon }) => {
   return (

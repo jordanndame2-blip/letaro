@@ -1,5 +1,6 @@
 import { BadgeDollarSign, Banknote, Building, ChevronRight, Clock, CreditCardIcon, Globe, Heart, Mail, MapPin, Phone } from 'lucide-react';
 import React from 'react'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 function Footer() {
 
@@ -34,20 +35,12 @@ const reservationModalities = [
   {id: 3,name: 'Sur place',icon: <Building className="w-4 h-4 mr-1 cursor-pointer"/>}
 ];
 
-// const socials = [
-//   { name: 'Facebook', icon: <Facebook className="w-5 h-5" />, href: '#', color: 'hover:bg-blue-600' },
-//   { name: 'Twitter', icon: <Twitter className="w-5 h-5" />, href: '#', color: 'hover:bg-sky-500' },
-//   { name: 'LinkedIn', icon: <Linkedin className="w-5 h-5" />, href: '#', color: 'hover:bg-blue-700' },
-//   { name: 'YouTube', icon: <Youtube className="w-5 h-5" />, href: '#', color: 'hover:bg-red-600' },
-//   { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, href: '#', color: 'hover:bg-pink-600' }
-// ];
-
 const socials = [
-  { name: 'Facebook',href: '#',},
-  { name: 'Twitter',href: '#',},
-  { name: 'LinkedIn',href: '#',},
-  { name: 'YouTube',href: '#',},
-  { name: 'Instagram',href: '#',}
+  { name: 'Facebook', icon: <FaFacebook className="w-5 h-5  mr-2" />, href: '#', color: 'hover:bg-blue-600' },
+  { name: 'Twitter', icon: <FaTwitter className="w-5 h-5  mr-2" />, href: '#', color: 'hover:bg-sky-500' },
+  { name: 'LinkedIn', icon: <FaLinkedin className="w-5 h-5  mr-2" />, href: '#', color: 'hover:bg-blue-700' },
+  { name: 'YouTube', icon: <FaYoutube className="w-5 h-5  mr-2" />, href: '#', color: 'hover:bg-red-600' },
+  { name: 'Instagram', icon: <FaInstagram className="w-5 h-5  mr-2" />, href: '#', color: 'hover:bg-pink-600' }
 ];
 
   return (
@@ -117,7 +110,8 @@ const socials = [
               {socials.map((social,index) => (
                 <li key={index}>
                   <a href={social.href} className="text-gray-400 hover:text-orange-600 transition-colors duration-300 flex items-center group">
-                    <ChevronRight className="w-4 h-4 mr-1 group-hover:translate-x-1 transition-transform" />
+                    {/* <ChevronRight className="w-4 h-4 mr-1 group-hover:translate-x-1 transition-transform" /> */}
+                    {social.icon}
                     {social.name}
                   </a>
                 </li>

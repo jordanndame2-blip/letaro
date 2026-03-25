@@ -1,69 +1,9 @@
 import { Star, Clock, Flame, ChevronRight } from 'lucide-react';
-
-const specialties = [
-  {
-    id: 1,
-    name: 'Poulet DG',
-    description: 'Poulet braisé aux légumes de saison, plantains et sauce spéciale',
-    price: '12 500 FCFA',
-    image: 'https://images.unsplash.com/photo-1604909052743-94e818986d86?w=500&h=400&fit=crop',
-    badge: 'Plat signature',
-    time: '25 min',
-    calories: '850 kcal'
-  },
-  {
-    id: 2,
-    name: 'Ndolé',
-    description: 'Morue, crevettes, arachides et légumes amers traditionnels',
-    price: '8 500 FCFA',
-    image: 'https://images.unsplash.com/photo-1637095031521-2d2f8c3f4b3e?w=500&h=400&fit=crop',
-    badge: 'Spécialité maison',
-    time: '20 min',
-    calories: '620 kcal'
-  },
-  {
-    id: 3,
-    name: 'Poisson Braisé',
-    description: 'Poisson frais grillé au feu de bois, sauce pimentée',
-    price: '15 000 FCFA',
-    image: 'https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=500&h=400&fit=crop',
-    badge: 'Frais du jour',
-    time: '30 min',
-    calories: '720 kcal'
-  },
-  {
-    id: 4,
-    name: 'Sanga',
-    description: 'Épinards, maïs moulu et viande fumée, un délice traditionnel',
-    price: '7 500 FCFA',
-    image: 'https://images.unsplash.com/photo-1637095021723-8a2b8c2c6f3e?w=500&h=400&fit=crop',
-    badge: 'Authentique',
-    time: '20 min',
-    calories: '540 kcal'
-  },
-  {
-    id: 5,
-    name: 'Crevettes Sautées',
-    description: 'Crevettes géantes sautées à l\'ail et persil, sauce légère',
-    price: '18 000 FCFA',
-    image: 'https://images.unsplash.com/photo-1559742811-822873691dfc?w=500&h=400&fit=crop',
-    badge: 'Plat premium',
-    time: '20 min',
-    calories: '480 kcal'
-  },
-  {
-    id: 6,
-    name: 'Tacos Camerounais',
-    description: 'Galette garnie de viande, fromage, salade et sauce spéciale',
-    price: '4 500 FCFA',
-    image: 'https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=500&h=400&fit=crop',
-    badge: 'Populaire',
-    time: '15 min',
-    calories: '680 kcal'
-  }
-];
+import { useNavigate } from 'react-router-dom';
+import { specialties } from '../../data/menu';
 
 const SpecialtiesSection = () => {
+  const navigate = useNavigate();
   return (
     <div className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,7 +81,7 @@ const SpecialtiesSection = () => {
 
         {/* Bouton voir plus */}
         <div className="text-center mt-12">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">
+          <button  onClick={() => navigate('/menu')} className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer">
             Voir toute la carte
           </button>
         </div>
